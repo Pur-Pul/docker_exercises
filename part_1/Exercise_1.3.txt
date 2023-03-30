@@ -1,0 +1,14 @@
+> docker run -d --rm -it devopsdockeruh/simple-web-service:ubuntu
+  ed2eba7e556471775e600d4997820662f16498e150e72c3c79e8754e919823be
+
+> docker ps
+  CONTAINER ID   IMAGE                                      COMMAND                 CREATED         STATUS         PORTS     NAMES
+  ed2eba7e5564   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"   9 seconds ago   Up 8 seconds             stoic_mccarthy
+
+> docker exec -it stoic_mccharty bash
+  root@ed2eba7e5564:/usr/src/app# tail -f ./text.log                                                                      
+  2023-03-08 15:08:15 +0000 UTC                                                                                           
+  2023-03-08 15:08:17 +0000 UTC                                                                                           
+  2023-03-08 15:08:19 +0000 UTC                                                                                           
+  2023-03-08 15:08:21 +0000 UTC                                                                                           
+  Secret message is: 'You can find the source code here: https://github.com/docker-hy'

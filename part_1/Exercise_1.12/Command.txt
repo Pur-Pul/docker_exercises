@@ -1,0 +1,1 @@
+docker build . -t hello_frontend & docker run -p 8080:5000 hello_frontend
