@@ -1,0 +1,15 @@
+I deployed the same application I dockerized in exercise 1.15 to fly.io. 
+This application lets you generate images using markov chains trained on various included pictures (mostly of cats).
+
+The dockerfile:
+Python 3.8 is downloaded.
+The port 8080 is exposed, which is the default internal port used by fly.
+The working directory is then set to be /usr/src/app and then all files in the project are copied over.
+Information about the dependencies are found in requirements.txt, which are then installed.
+The application is then started with the command "invoke start --web", 
+the "--web" tag specifies to start the web application version as the application can also be run in the terminal.
+
+Pushing the project to fly.io was easily done with the command "fly launch". 
+Fly automatically detected the dockerfile and proceeded to ask setup instructions (name, database etc.)
+
+The published application can be found at: https://markov-chain.fly.dev/
