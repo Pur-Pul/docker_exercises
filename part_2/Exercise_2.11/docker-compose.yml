@@ -7,13 +7,11 @@ services:
       ports:
         - 5432:5432
       environment:
-        - POSTGRES_USER=test_user
-        - POSTGRES_HOST=localhost
-        - POSTGRES_PASSWORD=test_pass
-        - POSTGRES_DB=test_db
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
       volumes:
         - database:/var/lib/postgresql/data
-      container_name: postgres
+      container_name: dev-postgres
     
 volumes:
   database:
